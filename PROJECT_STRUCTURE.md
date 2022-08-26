@@ -1,14 +1,14 @@
 # Cat Factory Structure
 
 Cat Factory is an application that communicates with the [Cat as a Service API](https://cataas.com/#/)
-API to display random images with the selected filters and the chosen text.
+to display random images with the selected filters and the chosen text.
 
 Available filters are: Mono, Sepia, Negative, Blur and Paint.
 
-The text can contain up to 50 characters.
+The text can contain up to 25 characters.
 
 ## Packages
-It uses the http package for API connection handling. In addition, the flutter_launcher_icons package was used to generate the launcher with a selected image.
+It uses the [http package](https://pub.dev/packages/http) for API connection handling. In addition, the [flutter_launcher_icons package](https://pub.dev/packages/flutter_launcher_icons) was used to generate the launcher with a selected image.
 
 ## State manager
 States are handled through Stateful Widgets.
@@ -17,6 +17,7 @@ States are handled through Stateful Widgets.
 Dependency injection is done through the Inherited Widget.
 
 ## Folder structure
+```
 lib
 |__core
 |  |__params //classes with the request body params of the endpoints
@@ -35,3 +36,4 @@ lib
 |  |__widgets //common widgets that are used across screens
 |__injector_widget.dart
 |__main.dart
+```
