@@ -1,0 +1,1 @@
+enum FilterType { blur, mono, sepia, negative, paint, pixel}
