@@ -1,5 +1,5 @@
 import 'package:cataas_app/injector_widget.dart';
-import 'package:cataas_app/presenter/cat_screen.dart';
+import 'package:cataas_app/presenter/screens/cat_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
