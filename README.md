@@ -27,6 +27,6 @@ An app to create random cat gif with filter and text inside.
   1. Run ```flutter build appbundle```
   2. Find the bundle in [project]/build/app/outputs/bundle/release/
   
-## To build app bundle, follow this
+## To build app apk, follow this
   1. Run ```flutter build apk --split-per-abi```
   2. Find the bundle in [project]/build/app/outputs/apk/release/
