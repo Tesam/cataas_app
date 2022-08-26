@@ -34,6 +34,6 @@ lib
 |  |__screens //app screens
 |  |__utils //helper classes
 |  |__widgets //common widgets that are used across screens
-|__injector_widget.dart
+|__injector_widget.dart //dependency injection
 |__main.dart
 ```
