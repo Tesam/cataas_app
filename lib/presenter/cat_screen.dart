@@ -23,6 +23,7 @@ class _CatScreenState extends State<CatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         backgroundColor: AppColors.primary,
         title: const Text(
@@ -140,17 +141,17 @@ class _CatScreenState extends State<CatScreen> {
                                                           ),
                                                           CSMChip(
                                                             widgetType:
-                                                            FilterType.sepia,
+                                                            FilterType.blur,
                                                             selectedType:
                                                             dialogFilterType,
                                                             title: AppUtils
                                                                 .capitalizeFirstLetter(
                                                                 FilterType
-                                                                    .sepia
+                                                                    .blur
                                                                     .name),
                                                             onTap: () =>
                                                                 setDialogState(() {
-                                                                  dialogFilterType = FilterType.sepia;
+                                                                  dialogFilterType = FilterType.blur;
                                                                 }),
                                                           ),
                                                         ],
@@ -177,32 +178,17 @@ class _CatScreenState extends State<CatScreen> {
                                                           ),
                                                           CSMChip(
                                                             widgetType:
-                                                            FilterType.blur,
+                                                            FilterType.sepia,
                                                             selectedType:
                                                             dialogFilterType,
                                                             title: AppUtils
                                                                 .capitalizeFirstLetter(
                                                                 FilterType
-                                                                    .blur
+                                                                    .sepia
                                                                     .name),
                                                             onTap: () =>
                                                                 setDialogState(() {
-                                                                  dialogFilterType = FilterType.blur;
-                                                                }),
-                                                          ),
-                                                          CSMChip(
-                                                            widgetType:
-                                                            FilterType.pixel,
-                                                            selectedType:
-                                                            dialogFilterType,
-                                                            title: AppUtils
-                                                                .capitalizeFirstLetter(
-                                                                FilterType
-                                                                    .pixel
-                                                                    .name),
-                                                            onTap: () =>
-                                                                setDialogState(() {
-                                                                  dialogFilterType = FilterType.pixel;
+                                                                  dialogFilterType = FilterType.sepia;
                                                                 }),
                                                           ),
                                                         ],
@@ -248,7 +234,63 @@ class _CatScreenState extends State<CatScreen> {
                                           icon: const Icon(
                                             Icons.title,
                                           ),
-                                          onPressed: () {},
+                                            onPressed: () => showDialog<String>(
+                                              context: context,
+                                              builder: (BuildContext context) {
+                                                TextEditingController textController =
+                                                    TextEditingController();
+                                                return StatefulBuilder(builder:
+                                                    (context, setDialogState) {
+                                                  return AlertDialog(
+                                                    title: const Text(
+                                                      'Write a text',
+                                                      style: TextStyle(
+                                                          color: AppColors
+                                                              .textColor),
+                                                    ),
+                                                    content: Column(
+                                                      mainAxisSize:
+                                                      MainAxisSize.min,
+                                                      children: [
+                                                        TextField(
+                                                          controller: textController,
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    actions: <Widget>[
+                                                      TextButton(
+                                                        onPressed: () =>
+                                                            Navigator.pop(
+                                                              context,
+                                                            ),
+                                                        child: const Text(
+                                                          'Cancel',
+                                                          style: TextStyle(
+                                                              color: AppColors
+                                                                  .textColor),
+                                                        ),
+                                                      ),
+                                                      TextButton(
+                                                        onPressed: () {
+                                                          setText(
+                                                              textController.text);
+                                                          Navigator.pop(context);
+                                                        },
+                                                        child: const Text(
+                                                          'SELECT',
+                                                          style: TextStyle(
+                                                              color: AppColors
+                                                                  .primary,
+                                                              fontWeight:
+                                                              FontWeight
+                                                                  .w700),
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  );
+                                                });
+                                              },
+                                            )
                                         ),
                                         const Spacer(),
                                         ElevatedButton(
