@@ -1,5 +1,6 @@
 import 'dart:typed_data';
 
+import 'package:cataas_app/core/params/get_cat_params.dart';
 import 'package:cataas_app/injector_widget.dart';
 import 'package:cataas_app/presenter/constants/app_colors.dart';
 import 'package:cataas_app/presenter/constants/app_enums.dart';
@@ -14,7 +15,7 @@ class CatScreen extends StatefulWidget {
 }
 
 class _CatScreenState extends State<CatScreen> {
-  FilterType filterType = FilterType.mono;
+  FilterType filterType = FilterType.paint;
   String imageText = "Hi!";
 
   @override
@@ -29,7 +30,8 @@ class _CatScreenState extends State<CatScreen> {
           centerTitle: true,
         ),
         body: FutureBuilder(
-            future: InjectorWidget.of(context)!.catRepository.getCat(),
+            future: InjectorWidget.of(context)!.catRepository.getCat(
+                GetCatParams(filter: filterType.name, text: imageText)),
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(
@@ -180,8 +182,7 @@ class _CatScreenState extends State<CatScreen> {
                                   Icons.share,
                                   color: AppColors.textColor,
                                 ),
-                                onTap: () {
-                                },
+                                onTap: () {},
                                 contentPadding: const EdgeInsets.symmetric(
                                     horizontal: 15, vertical: 0),
                                 visualDensity: const VisualDensity(
@@ -201,8 +202,7 @@ class _CatScreenState extends State<CatScreen> {
                                   Icons.download,
                                   color: AppColors.textColor,
                                 ),
-                                onTap: () {
-                                },
+                                onTap: () {},
                                 contentPadding: const EdgeInsets.symmetric(
                                     horizontal: 15, vertical: 0),
                                 visualDensity: const VisualDensity(
