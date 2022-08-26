@@ -1,0 +1,1 @@
+const apiUrl = "https://cataas.com/cat/gif";
