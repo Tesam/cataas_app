@@ -39,7 +39,7 @@ class _CatScreenState extends State<CatScreen> {
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(
-              child: CircularProgressIndicator(),
+              child: CircularProgressIndicator(color: AppColors.primary),
             );
           } else if (snapshot.hasData) {
             return Padding(
@@ -254,6 +254,7 @@ class _CatScreenState extends State<CatScreen> {
                                                       children: [
                                                         TextField(
                                                           controller: textController,
+                                                          maxLength: 25,
                                                         ),
                                                       ],
                                                     ),
