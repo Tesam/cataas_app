@@ -1,6 +1,5 @@
 import 'dart:typed_data';
 
-import 'package:cataas_app/core/params/get_cat_params.dart';
 import 'package:cataas_app/injector_widget.dart';
 import 'package:cataas_app/presenter/constants/app_colors.dart';
 import 'package:cataas_app/presenter/constants/app_enums.dart';
@@ -36,7 +35,7 @@ class _CatScreenState extends State<CatScreen> {
       body: FutureBuilder(
         future: InjectorWidget.of(context)!
             .catRepository
-            .getCat(GetCatParams(filter: filterType.name, text: imageText)),
+            .getCat(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(
