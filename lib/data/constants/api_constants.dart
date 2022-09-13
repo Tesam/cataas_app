@@ -1,1 +1,1 @@
-const apiUrl = "https://cataas.com/cat/gif";
+const apiUrl = "https://cataas.com";

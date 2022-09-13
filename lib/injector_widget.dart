@@ -1,8 +1,8 @@
 import 'package:cataas_app/data/datasources/remote/cat_service.dart';
+import 'package:cataas_app/data/datasources/remote/http_api_client.dart';
 import 'package:cataas_app/data/repositories/cat_repository_impl.dart';
 import 'package:cataas_app/domain/repositories/cat_repository.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 
 class InjectorWidget extends InheritedWidget {
   InjectorWidget(
@@ -11,9 +11,11 @@ class InjectorWidget extends InheritedWidget {
 
   late CatRepository catRepository;
   late CatService catService;
+  late HttpApiClient httpApiClient;
 
   void init() async {
-    catService = CatService(http.Client());
+    httpApiClient = const HttpApiClient();
+    catService = CatService(httpApiClient);
     catRepository = CatRepositoryImpl(catService);
   }
 
