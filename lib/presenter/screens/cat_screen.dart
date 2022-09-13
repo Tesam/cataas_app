@@ -1,7 +1,7 @@
 import 'package:cataas_app/injector_widget.dart';
 import 'package:cataas_app/presenter/constants/app_colors.dart';
 import 'package:cataas_app/presenter/constants/app_enums.dart';
-import 'package:cataas_app/presenter/notifier/cat_notifier.dart';
+import 'package:cataas_app/presenter/notifiers/cat_notifier.dart';
 import 'package:cataas_app/presenter/widgets/csm_button.dart';
 import 'package:cataas_app/presenter/widgets/wallpaper.dart';
 import 'package:flutter/material.dart';
