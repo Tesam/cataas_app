@@ -1,1 +1,6 @@
-enum FilterType { blur, mono, sepia, negative, paint,}
+enum AppState {
+  initial,
+  onData,
+  onError,
+  onLoading,
+}
