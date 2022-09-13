@@ -31,13 +31,14 @@ class Wallpaper extends StatelessWidget {
     );
 
     return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         firstRow,
         dividerRow,
         secondRow,
         dividerRow,
         firstRow,
+        dividerRow,
         secondRow,
       ],
     );
