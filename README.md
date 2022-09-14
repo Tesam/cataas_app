@@ -7,15 +7,13 @@ An app to create random cat gif with filter and text inside.
 [You can find a demo here](https://drive.google.com/file/d/17btJuj2cdeVD3ZbSRowN20ZF3XuA6Q-L/view?usp=sharing)
 
 ## Cat Factory Design
-[You can find the Figma file here](https://www.figma.com/file/Vjj7hZo55LGFZuprQjqTYr/Untitled?node-id=0%3A1)
+[You can find the Figma file here](https://www.figma.com/file/Vjj7hZo55LGFZuprQjqTYr/Cat-Factory?node-id=28%3A3)
 
-![cat_factory_screen](https://user-images.githubusercontent.com/24614720/186922896-7c09e557-d941-470a-86a1-f8c61f29d8d3.png)
+![cat-screen-inital](https://user-images.githubusercontent.com/24614720/190047849-e0d1311a-80ab-40bd-8cc5-1cf44a36c957.png)
 
-![image_filter_selector](https://user-images.githubusercontent.com/24614720/186922955-48d001f3-a02f-4678-bf5d-70120f92edb7.png)
+![cat-screen-data](https://user-images.githubusercontent.com/24614720/190047891-f6b9f5b8-810e-4324-a06c-b196d0da3222.png)
 
-![write_text_selector](https://user-images.githubusercontent.com/24614720/186922982-1e5b49e3-d3be-4186-8c11-ea4b9feec4b0.png)
-
-![pay_wall_screen](https://user-images.githubusercontent.com/24614720/186923022-8033af59-14d4-478f-aecc-98a147d8de5f.png)
+![cat-screen-error](https://user-images.githubusercontent.com/24614720/190047927-3007d73e-749a-4c2b-8dd4-157b7419e5a9.png)
 
 ## To make run, follow this
   1. Run ```flutter clean```
