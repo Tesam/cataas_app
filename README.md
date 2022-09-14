@@ -4,7 +4,7 @@ An app to create random cat gif with filter and text inside.
 
 ## Cat Factory Demo
 
-[You can find a demo here](https://drive.google.com/file/d/17btJuj2cdeVD3ZbSRowN20ZF3XuA6Q-L/view?usp=sharing)
+[You can find a demo here](https://drive.google.com/file/d/1tDkNy3spR1oRrKDepKEMIcscriMk4jXP/view?usp=sharing)
 
 ## Cat Factory Design
 [You can find the Figma file here](https://www.figma.com/file/Vjj7hZo55LGFZuprQjqTYr/Cat-Factory?node-id=28%3A3)
