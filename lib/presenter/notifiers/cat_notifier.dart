@@ -6,11 +6,13 @@ import 'package:cataas_app/presenter/notifiers/notifier_interface.dart';
 import 'package:flutter/foundation.dart';
 
 class CatNotifier extends ChangeNotifier implements INotifier<Uint8List>{
-  CatNotifier(this._getCat);
+  CatNotifier(this._getCat){
+    setAppState(state: AppState.onInitialData);
+  }
   final GetCat _getCat;
 
   late Uint8List _cat;
-  AppState _appState = AppState.onInitialData;
+  late AppState _appState;
 
   @override
   AppState get appState => _appState;
@@ -18,18 +20,20 @@ class CatNotifier extends ChangeNotifier implements INotifier<Uint8List>{
   Uint8List get data => _cat;
 
   void getCat() async {
-    _appState = AppState.onLoading;
-    notifyListeners();
+    setAppState(state: AppState.onLoading);
 
     final Uint8List? actualCat = await _getCat.getCat();
 
     if(actualCat == null){
-      _appState = AppState.onError;
-      notifyListeners();
-    }else{
+      setAppState(state: AppState.onError);
+    } else {
       _cat = actualCat;
-      _appState = AppState.onData;
-      notifyListeners();
+      setAppState(state: AppState.onData);
     }
+  }
+
+  void setAppState({required AppState state}){
+    _appState = state;
+    notifyListeners();
   }
 }
