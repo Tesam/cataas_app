@@ -54,7 +54,7 @@ class CatScreen extends StatelessWidget {
                               borderRadius: BorderRadius.circular(25),
                               child: (isOnData)
                                   ? Image.memory(
-                                      notifier.cat,
+                                      notifier.data,
                                       fit: BoxFit.fill,
                                     )
                                   : Image.asset('assets/cat_factory_icon.png'),

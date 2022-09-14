@@ -1,4 +1,5 @@
 import 'package:cataas_app/presenter/constants/app_enums.dart';
+import 'package:cataas_app/presenter/notifiers/notifier_interface.dart';
 import 'package:flutter/material.dart';
 
 class BodyBuilder extends StatelessWidget {
@@ -12,7 +13,7 @@ class BodyBuilder extends StatelessWidget {
   final Widget onError;
   final Widget onLoading;
   final Widget onData;
-  final dynamic notifier;
+  final INotifier notifier;
 
   @override
   Widget build(BuildContext context) {

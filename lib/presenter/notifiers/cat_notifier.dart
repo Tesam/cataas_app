@@ -2,18 +2,20 @@ import 'dart:typed_data';
 
 import 'package:cataas_app/domain/use_cases/get_cat.dart';
 import 'package:cataas_app/presenter/constants/app_enums.dart';
+import 'package:cataas_app/presenter/notifiers/notifier_interface.dart';
 import 'package:flutter/foundation.dart';
 
-class CatNotifier extends ChangeNotifier {
+class CatNotifier extends ChangeNotifier implements INotifier<Uint8List>{
   CatNotifier(this._getCat);
   final GetCat _getCat;
 
   late Uint8List _cat;
   AppState _appState = AppState.onInitialData;
 
-
-  Uint8List get cat => _cat;
+  @override
   AppState get appState => _appState;
+  @override
+  Uint8List get data => _cat;
 
   void getCat() async {
     _appState = AppState.onLoading;
