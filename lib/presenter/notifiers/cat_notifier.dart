@@ -9,7 +9,7 @@ class CatNotifier extends ChangeNotifier {
   final GetCat _getCat;
 
   late Uint8List _cat;
-  AppState _appState = AppState.initial;
+  AppState _appState = AppState.onInitialData;
 
 
   Uint8List get cat => _cat;

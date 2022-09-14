@@ -1,5 +1,5 @@
 enum AppState {
-  initial,
+  onInitialData,
   onData,
   onError,
   onLoading,
