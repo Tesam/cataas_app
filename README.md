@@ -1,6 +1,6 @@
 # Cat Factory
 
-An app to create random cat gif with filter and text inside.
+An app to create random cat gif.
 
 ## Cat Factory Demo
 
